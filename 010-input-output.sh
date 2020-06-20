@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "Printing text with a newline."
 echo -n "Printing text without a newline. "
@@ -14,7 +14,7 @@ echo "Line1.
 Print of a quotation mark like this \" needs to be escaped."
 
 # read (will strip backslashes).
-# read -r (will not strip backslashes, will strip leading and trailing spaces, prefered way).
+# read -r (will not strip backslashes, will strip leading and trailing spaces, preferred way).
 echo -n "What is your name: "
 read -r NAME
 echo "Hello $NAME!"

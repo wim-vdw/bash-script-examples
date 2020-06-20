@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Leading tabs will not be ignored.
 cat << _EOF_

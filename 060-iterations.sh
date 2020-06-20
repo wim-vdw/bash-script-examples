@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "While loop:"
 number=1
@@ -21,11 +21,23 @@ done
 
 for i in *.sh; do
   echo "File: $i"
-  echo "Lines: $(wc -l < $i)"
+  echo "Lines: $(wc -l < "$i")"
 done
 
 answer=
 while [ "$answer" != "0" ]; do
   echo -n "Answer: "
   read -r answer
+done
+
+echo "Test with nullglob set."
+shopt -s nullglob
+for i in *.will_not_be_found; do
+  echo "$i"
+done
+
+echo "Test with nullglob unset."
+shopt -u nullglob
+for i in *.will_not_be_found; do
+  echo "$i"
 done

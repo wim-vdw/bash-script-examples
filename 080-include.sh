@@ -1,5 +1,3 @@
-#!/bin/bash
-
 log() {
   local message=$1
   local log_level=$2

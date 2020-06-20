@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ "$(whoami)" == "wim" ]; then
   echo "Name is Wim"
@@ -25,6 +25,12 @@ else
 fi
 
 test "$(whoami)" != "root" && echo "You should run this script with root."
+
+DIR="testdirectory"
+[ -d "$DIR" ] || echo "Directory $DIR does not exist."
+DIR="."
+[ -d "$DIR" ] && echo "Directory $DIR does exist."
+[[ -f "$0" && -r "$0" ]] && echo "File $0 exists and is readable."
 
 NUMBER=2
 case $NUMBER in

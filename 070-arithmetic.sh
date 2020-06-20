@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "20 + 10 = $((20 + 10))"
 echo "20 - 10 = $((20 - 10))"

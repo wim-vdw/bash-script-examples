@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # No difference between variables and constants.
 # Put variable names in lowercase and constant names in uppercase.

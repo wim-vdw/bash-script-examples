@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 test_func() {
   local SLEEPTIME=$1
