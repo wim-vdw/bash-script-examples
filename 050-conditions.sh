@@ -26,6 +26,19 @@ fi
 
 test "$(whoami)" != "root" && echo "You should run this script with root."
 
+check_root() {
+  if [ $EUID -ne 0 ]; then
+    echo "This script must run as root" >&2
+    return 1
+  fi
+}
+
+if check_root; then
+  echo "You are connected as root."
+else
+  echo "You should be connected as root."
+fi
+
 DIR="testdirectory"
 [ -d "$DIR" ] || echo "Directory $DIR does not exist."
 DIR="."
